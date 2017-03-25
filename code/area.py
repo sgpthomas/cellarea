@@ -16,7 +16,7 @@ data is printed out labelled for each image
 9. possibly do some kind of standard deviation statistics
 """
 
-im = Image.open("../images/DSC_0625.jpeg") # open colour image
+im = Image.open("../images/unnamed.jpg") # open colour image
 
 im = im.convert('L') # convert image to grayscale
 im.filter(ImageFilter.EDGE_ENHANCE_MORE)
@@ -31,7 +31,7 @@ mag = numpy.hypot(dx, dy)  # magnitude
 mag *= 255.0 / numpy.max(mag)  # normalize (Q&D)
 scipy.misc.imsave('../images/result2.jpeg', mag)  #sobel 
 
-im = Image.open('../images/result2.jpeg')
+"""im = Image.open('../images/result2.jpeg')
 im = im.convert('L')
 im = ImageOps.invert(im)
-im.save('../images/result3.jpeg') #inverted grayscale
+im.save('../images/result3.jpeg') #inverted grayscale"""
